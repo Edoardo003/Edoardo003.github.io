@@ -1,3 +1,5 @@
-import { copyFile } from "node:fs/promises";
+import { copyFile, mkdir } from "node:fs/promises";
 
 await copyFile("dist/index.html", "dist/404.html");
+await mkdir("dist/redcode", { recursive: true });
+await copyFile("dist/index.html", "dist/redcode/index.html");
