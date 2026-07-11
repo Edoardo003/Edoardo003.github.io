@@ -1,8 +1,7 @@
 import { Section } from "./section";
 import { Github } from "lucide-react";
 
-// TODO: replace with the real repository URL once published.
-const REPO_URL = "https://github.com/Edoardo003/PLACEHOLDER-writeups";
+const REPO_URL = "https://github.com/Edoardo003/ctf-writeups";
 
 export function SecurityWriteups() {
   return (
