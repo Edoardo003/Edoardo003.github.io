@@ -1,0 +1,47 @@
+import { Github, Shield, ArrowDown, Mail } from "lucide-react";
+
+const ctas = [
+  { label: "View Projects", href: "#projects", Icon: ArrowDown, external: false },
+  { label: "Contact Me", href: "#contact", Icon: Mail, external: false },
+  { label: "GitHub", href: "https://github.com/Edoardo003", Icon: Github, external: true },
+  { label: "TryHackMe", href: "https://tryhackme.com/p/Edoardo.03", Icon: Shield, external: true },
+];
+
+export function Hero() {
+  return (
+    <header className="border-b border-black">
+      <div className="mx-auto max-w-4xl px-6 pb-14 pt-20">
+        <h1 className="tracking-tight" style={{ fontSize: "clamp(2rem, 6vw, 3.25rem)", fontWeight: 700, lineHeight: 1.05 }}>
+          Edoardo Crocetti
+        </h1>
+        <p className="mt-3 text-neutral-500" style={{ fontSize: "1rem", fontFamily: "ui-monospace, monospace" }}>
+          Penetration Tester / Web Security / API Security / Automation
+        </p>
+
+        <p className="mt-6 max-w-2xl text-neutral-700" style={{ fontSize: "1.0625rem", lineHeight: 1.7 }}>
+          Currently focused on web application security, API testing and
+          security automation. I build tools to automate reconnaissance,
+          vulnerability assessment and reporting, and improve through hands-on
+          labs, bug bounty practice and offensive security research.
+        </p>
+
+        <nav className="mt-8 flex flex-wrap items-center gap-4" aria-label="Primary">
+          {ctas.map(({ label, href, Icon, external }) => (
+            <a
+              key={label}
+              href={href}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer", "aria-label": `${label} (opens in a new tab)` }
+                : {})}
+              className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+              style={{ fontSize: "0.875rem", fontWeight: 500 }}
+            >
+              <Icon size={15} />
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
