@@ -9,9 +9,18 @@ const focus = [
 ];
 
 const timeline = [
-  { period: "2024 — now", text: "Web & API security, building recon and reporting automation." },
-  { period: "2023", text: "Network and infrastructure pentesting through structured labs." },
-  { period: "2022", text: "Foundations: Linux, networking, scripting, CTF practice." },
+  {
+    period: "2025 — now",
+    text: "Focused practice in web & API security through hands-on labs, authorized testing environments, and security research.",
+  },
+  {
+    period: "Projects",
+    text: "Building Python tooling for reconnaissance, evidence handling, and reporting automation.",
+  },
+  {
+    period: "Foundations",
+    text: "Web engineering, Linux, networking, and scripting applied to application security.",
+  },
 ];
 
 export function About() {
@@ -20,9 +29,10 @@ export function About() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1fr]">
         <div>
           <p className="text-neutral-700" style={{ lineHeight: 1.7 }}>
-            I learn by building and breaking. Most of my time goes into labs,
-            writing tooling in Python, and documenting what I find. Below is a
-            short view of how the focus has shifted over time.
+            I learn by building and testing ideas in practice. My work currently
+            focuses on web and API security, Python tooling, and clear technical
+            documentation. I use hands-on labs and personal projects to turn
+            theory into repeatable workflows.
           </p>
           <ul className="mt-6 border-t border-black/10">
             {timeline.map((t) => (
