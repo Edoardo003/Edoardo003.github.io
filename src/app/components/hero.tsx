@@ -58,8 +58,10 @@ export function Hero() {
                   LinkedIn
                 </a>
                 <a
-                  href="mailto:contact@edoardosec.com?subject=Contact%20from%20Edoardo%20Crocetti%27s%20portfolio"
-                  aria-label="Email contact@edoardosec.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact%40edoardosec.com&su=Contact%20from%20Edoardo%20Crocetti%27s%20portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email contact@edoardosec.com in Gmail"
                   className="inline-flex flex-1 items-center justify-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
                   style={{ fontSize: "0.875rem", fontWeight: 500 }}
                 >
