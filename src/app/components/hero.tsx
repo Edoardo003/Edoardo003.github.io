@@ -2,16 +2,14 @@ import { Github, Shield, ArrowDown, Mail, Linkedin } from "lucide-react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
 
 const ctas = [
-  { label: "View Projects", href: "#projects", Icon: ArrowDown, external: false },
-  { label: "GitHub", href: "https://github.com/Edoardo003", Icon: Github, external: true },
-  { label: "TryHackMe", href: "https://tryhackme.com/p/Edoardo.03", Icon: Shield, external: true },
+  { label: "TryHackMe", href: "https://tryhackme.com/p/Edoardo.03", Icon: Shield },
+  { label: "GitHub", href: "https://github.com/Edoardo003", Icon: Github },
 ];
 
 export function Hero() {
@@ -33,25 +31,11 @@ export function Hero() {
         </p>
 
         <nav className="mt-8 flex flex-wrap items-center gap-4" aria-label="Primary">
-          {ctas.map(({ label, href, Icon, external }) => (
-            <a
-              key={label}
-              href={href}
-              {...(external
-                ? { target: "_blank", rel: "noopener noreferrer", "aria-label": `${label} (opens in a new tab)` }
-                : {})}
-              className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
-              style={{ fontSize: "0.875rem", fontWeight: 500 }}
-            >
-              <Icon size={15} />
-              {label}
-            </a>
-          ))}
           <Dialog>
             <DialogTrigger asChild>
               <button
                 type="button"
-                className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+                className="inline-flex items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
                 style={{ fontSize: "0.875rem", fontWeight: 500 }}
               >
                 <Mail size={15} />
@@ -61,9 +45,6 @@ export function Hero() {
             <DialogContent className="rounded-none border-black bg-white">
               <DialogHeader>
                 <DialogTitle>Get in touch</DialogTitle>
-                <DialogDescription>
-                  Choose how you would like to contact me.
-                </DialogDescription>
               </DialogHeader>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
@@ -77,7 +58,8 @@ export function Hero() {
                   LinkedIn
                 </a>
                 <a
-                  href="mailto:contact@edoardosec.com"
+                  href="mailto:contact@edoardosec.com?subject=Contact%20from%20Edoardo%20Crocetti%27s%20portfolio"
+                  aria-label="Email contact@edoardosec.com"
                   className="inline-flex flex-1 items-center justify-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
                   style={{ fontSize: "0.875rem", fontWeight: 500 }}
                 >
@@ -87,6 +69,28 @@ export function Hero() {
               </div>
             </DialogContent>
           </Dialog>
+          <a
+            href="#projects"
+            className="ml-4 inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+            style={{ fontSize: "0.875rem", fontWeight: 500 }}
+          >
+            <ArrowDown size={15} />
+            View Projects
+          </a>
+          {ctas.map(({ label, href, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${label} (opens in a new tab)`}
+              className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+              style={{ fontSize: "0.875rem", fontWeight: 500 }}
+            >
+              <Icon size={15} />
+              {label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
