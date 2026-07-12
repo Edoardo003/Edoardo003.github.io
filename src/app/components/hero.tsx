@@ -69,14 +69,6 @@ export function Hero() {
               </div>
             </DialogContent>
           </Dialog>
-          <a
-            href="#projects"
-            className="ml-4 inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
-            style={{ fontSize: "0.875rem", fontWeight: 500 }}
-          >
-            <ArrowDown size={15} />
-            View Projects
-          </a>
           {ctas.map(({ label, href, Icon }) => (
             <a
               key={label}
@@ -91,6 +83,14 @@ export function Hero() {
               {label}
             </a>
           ))}
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white md:ml-auto"
+            style={{ fontSize: "0.875rem", fontWeight: 500 }}
+          >
+            <ArrowDown size={15} />
+            View Projects
+          </a>
         </nav>
       </div>
     </header>
