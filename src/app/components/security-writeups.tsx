@@ -45,20 +45,16 @@ export function SecurityWriteups() {
         </a>
       </article>
 
-      <div className="mt-6 border border-black/15 p-5">
-        <h3 style={{ fontSize: "1rem", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>
-          Write-up Repository
-        </h3>
-        <p className="mt-2 text-neutral-600" style={{ fontSize: "0.9rem", lineHeight: 1.6 }}>
-          Reusable documentation templates and technical write-ups from CTF
-          challenges, TryHackMe rooms, authorized labs and intentionally
-          vulnerable applications.
-        </p>
-        <p className="mt-3 text-neutral-500" style={{ fontSize: "0.82rem", fontFamily: "ui-monospace, monospace" }}>
-          TryHackMe rooms, authorized labs, and technical notes
-        </p>
-
-        <div className="mt-5 flex flex-wrap items-center gap-4">
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-black/15 pt-5">
+        <div>
+          <h3 style={{ fontSize: "0.9rem", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>
+            Write-up Repository
+          </h3>
+          <p className="mt-1 text-neutral-500" style={{ fontSize: "0.82rem" }}>
+            All write-ups and templates on GitHub.
+          </p>
+        </div>
+        <div>
           <a
             href={REPO_URL}
             target="_blank"
@@ -68,11 +64,8 @@ export function SecurityWriteups() {
             style={{ fontSize: "0.875rem", fontWeight: 500 }}
           >
             <Github size={15} />
-            View Write-up Repository
+            Browse repository
           </a>
-          <span className="text-neutral-400" style={{ fontSize: "0.8rem" }} aria-hidden="true">
-            Updated as new write-ups are completed
-          </span>
         </div>
       </div>
     </Section>
