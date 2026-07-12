@@ -1,8 +1,15 @@
-import { Github, Shield, ArrowDown, Mail } from "lucide-react";
+import { Github, Shield, ArrowDown, Mail, Linkedin } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 const ctas = [
   { label: "View Projects", href: "#projects", Icon: ArrowDown, external: false },
-  { label: "Contact Me", href: "#contact", Icon: Mail, external: false },
   { label: "GitHub", href: "https://github.com/Edoardo003", Icon: Github, external: true },
   { label: "TryHackMe", href: "https://tryhackme.com/p/Edoardo.03", Icon: Shield, external: true },
 ];
@@ -40,6 +47,46 @@ export function Hero() {
               {label}
             </a>
           ))}
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+                style={{ fontSize: "0.875rem", fontWeight: 500 }}
+              >
+                <Mail size={15} />
+                Contact Me
+              </button>
+            </DialogTrigger>
+            <DialogContent className="rounded-none border-black bg-white">
+              <DialogHeader>
+                <DialogTitle>Get in touch</DialogTitle>
+                <DialogDescription>
+                  Choose how you would like to contact me.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="https://www.linkedin.com/in/edoardo-crocetti-24b260374/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex flex-1 items-center justify-center gap-2 border border-black px-3.5 py-2 transition-colors hover:bg-black hover:text-white"
+                  style={{ fontSize: "0.875rem", fontWeight: 500 }}
+                >
+                  <Linkedin size={15} />
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto:contact@edoardosec.com"
+                  className="inline-flex flex-1 items-center justify-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
+                  style={{ fontSize: "0.875rem", fontWeight: 500 }}
+                >
+                  <Mail size={15} />
+                  Email me
+                </a>
+              </div>
+            </DialogContent>
+          </Dialog>
         </nav>
       </div>
     </header>
