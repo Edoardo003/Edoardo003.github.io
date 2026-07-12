@@ -7,12 +7,9 @@ export function Footer() {
         </p>
 
         <div className="mb-10">
-          <p className="mb-3 uppercase tracking-widest text-neutral-500" style={{ fontSize: "0.68rem", fontWeight: 600 }}>
-            Available for
-          </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex max-w-sm flex-col gap-2">
             {["Junior Penetration Tester", "Internship", "Graduate Programs"].map((r) => (
-              <span key={r} className="border border-black/20 px-2.5 py-1 text-neutral-800" style={{ fontSize: "0.85rem" }}>
+              <span key={r} className="w-full border border-black/20 px-2.5 py-1 text-neutral-800" style={{ fontSize: "0.85rem" }}>
                 {r}
               </span>
             ))}
