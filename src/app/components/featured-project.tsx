@@ -3,12 +3,12 @@ import { Section } from "./section";
 import { Github, BookText, ArrowRight } from "lucide-react";
 
 const built = [
-  "Multi-agent architecture with specialized security roles",
-  "Automated reconnaissance and enumeration workflows",
-  "Vulnerability scanning pipeline with Nuclei and other tools",
-  "MCP integrations for offensive security tooling",
-  "AI-assisted exploit research and PoC generation",
-  "Automated evidence collection and professional report generation",
+  "A primary orchestrator with specialist agents for recon, OSINT, scanning, validation, CTFs, and reporting",
+  "A local control plane for engagement manifests, scope checks, migrations, and diagnostics",
+  "Role-scoped MCP connections to HexStrike, Fetch, Playwright, SQLite, and the constrained filesystem",
+  "Structured JSON handoffs with a SQLite index for findings, approvals, tool runs, and evidence metadata",
+  "Separate workspaces for security assessments and CTF challenges",
+  "A project-local theme with light and dark variants for the OpenCode workspace",
 ];
 
 
@@ -24,17 +24,15 @@ export function FeaturedProject() {
         RedCode
       </h3>
       <p className="mt-1 text-neutral-500" style={{ fontFamily: "ui-monospace, monospace", fontSize: "0.9rem" }}>
-        AI-Assisted Security Assessment Framework
+        OpenCode workspace for authorized security assessments and CTFs
       </p>
 
       <p className="mt-4 max-w-2xl text-neutral-700" style={{ lineHeight: 1.7 }}>
-        RedCode is a personal project built to streamline repetitive penetration
-        testing tasks without replacing manual analysis. It extends OpenCode with
-        specialized security agents, automated workflows and MCP integrations to
-        support reconnaissance, vulnerability assessment, exploit research and
-        professional reporting. It was designed to experiment with modern
-        AI-assisted offensive security workflows while keeping the analyst in
-        control of every stage of the assessment.
+        RedCode is an OpenCode workspace for authorized security assessments and
+        CTFs. It coordinates focused agents, local security tooling through MCP,
+        and structured scope, findings, and evidence across the workflow. The
+        analyst remains responsible for approvals, manual validation, and final
+        reporting.
       </p>
 
       {/* What I built */}
@@ -52,17 +50,16 @@ export function FeaturedProject() {
         </ul>
       </div>
 
-{/* Why I built it */}
+      {/* Why I built it */}
       <div className="mt-8">
         <p className="mb-3 uppercase tracking-widest text-neutral-500" style={{ fontSize: "0.68rem", fontWeight: 600 }}>
           Why I built it
         </p>
         <p className="max-w-2xl text-neutral-700" style={{ lineHeight: 1.7 }}>
-          I created RedCode to better understand how modern penetration testing
-          workflows can be automated while preserving analyst decision-making.
-          The project lets me experiment with agent orchestration, security
-          tooling integration and report generation in a realistic offensive
-          security workflow.
+          I built RedCode to keep useful security context together between
+          reconnaissance, tooling, manual validation, notes, and reporting. It
+          is also a way for me to explore agent orchestration and security-tool
+          integration while keeping the important decisions with the analyst.
         </p>
       </div>
 

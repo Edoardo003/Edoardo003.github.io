@@ -29,10 +29,10 @@ export function About() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1fr]">
         <div>
           <p className="text-neutral-700" style={{ lineHeight: 1.7 }}>
-            I learn by building and testing ideas in practice. My work currently
-            focuses on web and API security, Python tooling, and clear technical
-            documentation. I use hands-on labs and personal projects to turn
-            theory into repeatable workflows.
+            I spend most of my time working through labs, building security
+            tooling in Python, and documenting what I learn. My current focus is
+            web and API security, with an interest in making the repetitive parts
+            of the work easier to manage.
           </p>
           <ul className="mt-6 border-t border-black/10">
             {timeline.map((t) => (
