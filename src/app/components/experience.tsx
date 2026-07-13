@@ -2,8 +2,8 @@ import { Section } from "./section";
 
 const items = [
   { title: "TryHackMe", text: "Offensive and defensive paths, from enumeration to privilege escalation." },
-  { title: "Personal Research", text: "Writeups and notes on recon automation and JWT/session flaws." },
-  { title: "Automation Projects", text: "Python tooling for recon, scanning orchestration and report generation." },
+  { title: "Personal Research", text: "Write-ups and research on recon workflows and agentic security systems." },
+  { title: "Automation Projects", text: "Lightweight OpenCode wrapper for recon, scanning orchestration and report generation." },
 ];
 
 export function Experience() {
