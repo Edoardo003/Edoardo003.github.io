@@ -2,7 +2,6 @@ import { Hero } from "../components/hero";
 import { About } from "../components/about";
 import { FeaturedProject } from "../components/featured-project";
 import { HomeLab } from "../components/home-lab";
-import { Capabilities } from "../components/capabilities";
 import { SecurityWriteups } from "../components/security-writeups";
 import { Experience } from "../components/experience";
 import { Footer } from "../components/footer";
@@ -17,7 +16,6 @@ export function Home() {
       <About />
       <FeaturedProject />
       <HomeLab />
-      <Capabilities />
       <SecurityWriteups />
       <Experience />
       <Footer />
