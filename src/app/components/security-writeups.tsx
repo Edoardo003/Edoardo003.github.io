@@ -19,7 +19,7 @@ const writeups = [
     difficulty: "Intermediate",
     summary:
       "SQL injection flaws and Twig SSTI chained from a public login bypass to server-side file disclosure.",
-    topics: ["SQL Injection", "Authentication Bypass", "Twig SSTI"],
+    topics: ["SQL Injection", "Twig SSTI", "Authentication Bypass"],
     href: "https://github.com/Edoardo003/ctf-writeups/blob/main/TryHackMe/Injectics/injectics.md",
   },
   {
