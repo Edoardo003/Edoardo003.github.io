@@ -64,17 +64,19 @@ export function SecurityWriteups() {
               ))}
             </div>
 
-            <a
-              href={writeup.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Read the ${writeup.title} write-up on GitHub (opens in a new tab)`}
-              className="mt-5 inline-flex w-fit items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black md:mt-auto"
-              style={{ fontSize: "0.875rem", fontWeight: 500 }}
-            >
-              Read write-up
-              <ArrowUpRight size={15} />
-            </a>
+            <div className="mt-auto pt-5">
+              <a
+                href={writeup.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Read the ${writeup.title} write-up on GitHub (opens in a new tab)`}
+                className="inline-flex w-fit items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
+                style={{ fontSize: "0.875rem", fontWeight: 500 }}
+              >
+                Read write-up
+                <ArrowUpRight size={15} />
+              </a>
+            </div>
           </article>
         ))}
       </div>
