@@ -5,6 +5,15 @@ const REPO_URL = "https://github.com/Edoardo003/ctf-writeups";
 
 const writeups = [
   {
+    title: "What's Your Name?",
+    platform: "TryHackMe",
+    difficulty: "Medium",
+    summary:
+      "Stored XSS chained from moderator session hijacking to an administrator password reset.",
+    topics: ["Stored XSS", "Session Hijacking", "CSRF"],
+    href: "https://github.com/Edoardo003/ctf-writeups/blob/main/TryHackMe/Whats-Your-Name/whats-your-name.md",
+  },
+  {
     title: "Injectics",
     platform: "TryHackMe",
     difficulty: "Intermediate",
@@ -31,9 +40,9 @@ export function SecurityWriteups() {
       label="Security Write-ups"
       subtitle="Structured technical documentation from CTF challenges, authorized labs and intentionally vulnerable applications."
     >
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {writeups.map((writeup) => (
-          <article key={writeup.title} className="border border-black p-5">
+          <article key={writeup.title} className="flex h-full flex-col border border-black p-5">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <h3 style={{ fontSize: "1rem", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>
                 {writeup.title}
@@ -60,7 +69,7 @@ export function SecurityWriteups() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Read the ${writeup.title} write-up on GitHub (opens in a new tab)`}
-              className="mt-5 inline-flex items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black"
+              className="mt-5 inline-flex w-fit items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black md:mt-auto"
               style={{ fontSize: "0.875rem", fontWeight: 500 }}
             >
               Read {writeup.title} write-up
