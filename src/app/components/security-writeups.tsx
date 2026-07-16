@@ -72,7 +72,7 @@ export function SecurityWriteups() {
               className="mt-5 inline-flex w-fit items-center gap-2 border border-black bg-black px-3.5 py-2 text-white transition-colors hover:bg-white hover:text-black md:mt-auto"
               style={{ fontSize: "0.875rem", fontWeight: 500 }}
             >
-              Read {writeup.title} write-up
+              Read write-up
               <ArrowUpRight size={15} />
             </a>
           </article>
